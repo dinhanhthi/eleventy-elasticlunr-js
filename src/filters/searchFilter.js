@@ -5,7 +5,8 @@ module.exports = function(collection) {
     this.addField("title");
     this.addField("excerpt");
     this.addField("genres");
-    this.setRef("id");
+		this.setRef("id");
+		this.addField("content");
   });
 
   collection.forEach(page => {
@@ -13,7 +14,8 @@ module.exports = function(collection) {
       id: page.url,
       title: page.data.title,
       excerpt: page.data.excerpt,
-      genres: page.data.genres
+			genres: page.data.genres,
+			content: page.templateContent
     });
   });
 

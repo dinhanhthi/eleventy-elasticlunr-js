@@ -31,7 +31,7 @@ const addSelected2 = (ulRes, li) => {
 			if (results != "") { // if there is result
 				noResEl.style.display = "none";
 				results.map((r) => {
-					var { id, title, description } = r.doc; // use description instead
+					var { id, title, content } = r.doc; // use content instead
 
 					const el = document.createElement("li");
 					ulRes.appendChild(el);
@@ -63,22 +63,22 @@ const addSelected2 = (ulRes, li) => {
 
 					const p = document.createElement("p");
 
-					if (description && kw) {
-						if (description.toLowerCase().includes(kw.toLowerCase())) {
-							description = description.replace(regEx, function (x) {
+					if (content && kw) {
+						if (content.toLowerCase().includes(kw.toLowerCase())) {
+							content = content.replace(regEx, function (x) {
 								return ' <mark>' + x + '</mark>';
 							});
 						}
-						if (description.indexOf("<mark>") > 10){
-							description = "..." + description.substring(description.indexOf("<mark>") - 10);
+						if (content.indexOf("<mark>") > 10){
+							content = "..." + content.substring(content.indexOf("<mark>") - 10);
 						}
-						// too long description or content
+						// too long content or content
 						// -- uncomment below if search on full content
-						// if (description.length > 500) {
-						// 	description = "..." + description.substring(0, description.indexOf("<mark>") + kw.length + 15) + "..."
+						// if (content.length > 500) {
+						// 	content = "..." + content.substring(0, content.indexOf("<mark>") + kw.length + 15) + "..."
 						// }
 					}
-					p.innerHTML = description;
+					p.innerHTML = content;
 					divContent.appendChild(p);
 
 					const enter = document.createElement("div");

@@ -2,6 +2,17 @@
 {% set title = "11ty + ElasticlunrJS" %}
 {% block content %}
 
+	<p>
+		👉 The demo searches the title, excerpt and genres of the <a href="https://www.themoviedb.org/movie/top-rated" target="_blank">The Movie Database Top 100</a>.
+		<br />
+		👉 Check the source code on <a href="https://github.com/duncanmcdougall/eleventy-search-demo">GitHub</a>
+	</p>
+
+	<p>
+		💡 Try to search "spider man" to see how it works. <br />
+		💡 Try to use <b>Arrow keys</b> to navigate between result items.
+	</p>
+
 	<div id="nav-search" class="nav-search">
 		<form>
 			<input id="nav-search__input"
@@ -17,19 +28,6 @@
 				<p>No results found.</p>
 			</div>
 		</div>
-	</div>
-
-	<p>The demo searches the title, excerpt and genres of the <a href="https://www.themoviedb.org/movie/top-rated" target="_blank">The Movie Database Top 100</a>.</p>
-	<p>
-		<a href="https://github.com/duncanmcdougall/eleventy-search-demo">GitHub repo</a>
-	</p>
-	<div class="field">
-		<label for="searchField">Search</label>
-		<input type="search" placeholder="Search..." id="searchField">
-	</div>
-	<ol id="searchResults"></ol>
-	<div id="noResultsFound" style="display: none">
-		<p>No results found.</p>
 	</div>
 
 	<script

@@ -1,6 +1,7 @@
 body {
 	background: #282a36;
 	color: #fff;
+	font-family: 'Poppins', sans-serif;
 }
 a {
 	color: #ffd479;
@@ -10,6 +11,15 @@ a {
 		border-bottom: 2px solid #ffd479;
 	}
 }
+
+b, strong{
+	color: #8cc8ff;
+}
+
+img{
+	max-width: 100%;
+}
+
 .container {
 	width: 100%;
 	margin: 2rem auto;
@@ -23,10 +33,12 @@ a {
 }
 
 .nav-search {
+	margin-top: 2rem;
 	display: block;
 	background-image: linear-gradient(to right, #3d4251, #3b3f4c, #393d46, #373a41, #35373c);
 	width: 100%;
 	position: relative;
+	border-radius: 10px;
 	form {
 		display: flex;
 	}
@@ -34,8 +46,8 @@ a {
 		border: 0;
 		background: transparent;
 		color: #ddd;
-		font-size: 1.05rem;
-		padding: 0.65rem 0.5rem;
+		font-size: 1.2rem;
+		padding: 1.5rem 1rem;
 		width: 100%;
 		&:focus {
 			outline: none;
@@ -48,13 +60,13 @@ a {
 		max-height: 80vh;
 		overflow: auto;
 		width: 100%;
-		background: $c-bg-nav;
+		background: #35373c;
 		border-bottom-right-radius: 5px;
 		border-bottom-left-radius: 5px;
 		padding: 0;
 		filter: drop-shadow(2px 4px 6px black);
 
-		@media (max-width: $grid-md - 1px) {
+		@media (max-width: 768px - 1px) {
 			position: fixed;
 			left: 0;
 			right: 0;
@@ -73,6 +85,10 @@ a {
 				overflow: hidden;
 				.item__icon {
 					width: 20px;
+					img{
+						width: 100%;
+						height: auto;
+					}
 				}
 				.item__content {
 					padding: 0 10px;
@@ -85,12 +101,12 @@ a {
 						overflow: hidden;
 						text-overflow: ellipsis;
 						a {
-							color: #efb232;
+							color: #ffcb5e;
 							white-space: inherit;
 							padding: 0;
 							text-align: left;
 							font-weight: normal;
-							font-size: $font-size;
+							font-size: 16px;
 							line-height: 1.5;
 							margin: 0;
 							white-space: nowrap;
@@ -99,7 +115,7 @@ a {
 							display: block;
 							&:hover {
 								border-bottom: none;
-								color: $c-blue;
+								color: #8cc8ff;
 							}
 						}
 					}
@@ -118,7 +134,7 @@ a {
 					display: none;
 				}
 				&.selected {
-					background: $c-background;
+					background: #282a36;
 					.enter {
 						display: block;
 					}
